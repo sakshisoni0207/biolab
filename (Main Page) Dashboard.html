@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sakshi's BIO-LAB 3D | Master Dashboard</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --panel: #1e293b;
+            --g6: #00ffcc;
+            --g7: #ff3366;
+            --g8: #a855f7;
+            --g9: #f59e0b;
+            --g10: #10b981;
+            --g11: #38bdf8;
+            --g12: #6366f1;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: radial-gradient(circle at top, #1e293b, #0f172a); 
+            color: white; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px 30px;
+            width: 100%;
+        }
+
+        h1 { 
+            font-size: 3rem; 
+            margin: 0; 
+            letter-spacing: 2px;
+            background: linear-gradient(to right, #00ffcc, #38bdf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .subtitle { 
+            font-size: 1.2rem; 
+            opacity: 0.7; 
+            margin-top: 10px; 
+            letter-spacing: 1px;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            width: 90%;
+            max-width: 1200px;
+            padding: 40px 0;
+        }
+
+        .grade-card {
+            background: var(--panel);
+            border-radius: 16px;
+            padding: 30px 20px;
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(255,255,255,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .card-6 { border-top: 4px solid var(--g6); }
+        .card-7 { border-top: 4px solid var(--g7); }
+        .card-8 { border-top: 4px solid var(--g8); }
+        .card-9 { border-top: 4px solid var(--g9); }
+        .card-10 { border-top: 4px solid var(--g10); }
+        .card-11 { border-top: 4px solid var(--g11); }
+        .card-12 { border-top: 4px solid var(--g12); }
+
+        .grade-card h2 { font-size: 2rem; margin: 0 0 10px 0; }
+        .card-6 h2 { color: var(--g6); }
+        .card-7 h2 { color: var(--g7); }
+        .card-8 h2 { color: var(--g8); }
+        .card-9 h2 { color: var(--g9); }
+        .card-10 h2 { color: var(--g10); }
+        .card-11 h2 { color: var(--g11); }
+        .card-12 h2 { color: var(--g12); }
+
+        .grade-card p { opacity: 0.6; font-size: 0.9rem; margin: 0; line-height: 1.4; }
+
+        .grade-card:hover { transform: translateY(-10px); }
+        .card-6:hover { box-shadow: 0 15px 35px rgba(0, 255, 204, 0.2); }
+        .card-7:hover { box-shadow: 0 15px 35px rgba(255, 51, 102, 0.2); }
+        .card-8:hover { box-shadow: 0 15px 35px rgba(168, 85, 247, 0.2); }
+        .card-9:hover { box-shadow: 0 15px 35px rgba(245, 158, 11, 0.2); }
+        .card-10:hover { box-shadow: 0 15px 35px rgba(16, 185, 129, 0.2); }
+        .card-11:hover { box-shadow: 0 15px 35px rgba(56, 189, 248, 0.2); }
+        .card-12:hover { box-shadow: 0 15px 35px rgba(99, 102, 241, 0.2); }
+
+        footer {
+            margin-top: auto;
+            padding: 30px;
+            text-align: center;
+            opacity: 0.5;
+            font-size: 0.8rem;
+            word-spacing: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>BIO-LAB 3D</h1>
+        <div class="subtitle">Interactive Science Curriculum</div>
+    </header>
+
+    <div class="dashboard-grid">
+        <a href="6(Main Page).html" class="grade-card card-6">
+            <h2>Grade 6</h2>
+            <p>Plant Cell, Flower Anatomy, Leaf Structure</p>
+        </a>
+
+        <a href="7(Main Page).html" class="grade-card card-7">
+            <h2>Grade 7</h2>
+            <p>Plant Tissue, Excretory System, Nervous System</p>
+        </a>
+
+        <a href="8(Main Page).html" class="grade-card card-8">
+            <h2>Grade 8</h2>
+            <p>Endocrine System, Circulatory System</p>
+        </a>
+
+        <a href="9(Main Page).html" class="grade-card card-9">
+            <h2>Grade 9</h2>
+            <p>Human Tissues, Seed Germination, Digestive System</p>
+        </a>
+
+        <a href="10(Main Page).html" class="grade-card card-10">
+            <h2>Grade 10</h2>
+            <p>Cell Division (Mitosis), Genetics & DNA</p>
+        </a>
+
+        <a href="11(Main Page).html" class="grade-card card-11">
+            <h2>Grade 11</h2>
+            <p>Anatomy of Plants, Biomolecules</p>
+        </a>
+
+        <a href="12(Main Page).html" class="grade-card card-12">
+            <h2>Grade 12</h2>
+            <p>Reproduction in Organisms, Evolution</p>
+        </a>
+    </div>
+
+    <footer>
+        System&nbsp;Online   ICSE/ISC&nbsp;Compliant   All&nbsp;Security&nbsp;Bypasses&nbsp;Active   Developed&nbsp;by&nbsp;Sakshi&nbsp;Soni
+    </footer>
+
+</body>
+</html>

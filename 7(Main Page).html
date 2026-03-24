@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Sakshi's ICSE Biology Lab | Grade 7</title>
+    <style>
+        :root {
+            /* Kept the premium medical pink/red theme for Grade 7! */
+            --primary: #ff3366; 
+            --bg: #0f172a;
+            --panel: #1e293b;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: var(--bg); 
+            color: white; 
+            display: flex; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        #sidebar {
+            width: 300px;
+            background: var(--panel);
+            padding: 35px 20px;
+            border-right: 2px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 { font-size: 1.6rem; color: var(--primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .subtitle { font-size: 0.8rem; opacity: 0.5; margin-bottom: 40px; }
+
+        .topic-btn {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 15px;
+            background: #0f172a;
+            border: 1px solid rgba(255, 51, 102, 0.2);
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .topic-btn:hover { 
+            background: var(--primary); 
+            color: #fff; 
+            transform: translateX(10px);
+            box-shadow: 0 0 20px rgba(255, 51, 102, 0.4);
+        }
+
+        #viewport { 
+            flex-grow: 1; 
+            background: #000;
+        }
+
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
+
+        #footer {
+            margin-top: auto;
+            font-size: 0.75rem;
+            opacity: 0.4;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h1>BIO-LAB 3D</h1>
+        <div class="subtitle">ICSE GRADE 7 CURRICULUM</div>
+        
+        <button class="topic-btn" onclick="openModel('plant')">Plant Tissue Anatomy</button>
+        <button class="topic-btn" onclick="openModel('excretory')">The Excretory System</button>
+        <button class="topic-btn" onclick="openModel('nervous')">The Nervous System</button>
+
+        <div id="footer">
+            Developer: Sakshi Soni<br>
+            Security Bypass: Active
+        </div>
+    </div>
+
+    <div id="viewport">
+        <iframe id="lab-viewer" src="https://sketchfab.com/models/5c426b7880e440ce834012d06763d502/embed?autostart=1"></iframe>
+    </div>
+
+    <script>
+        const biologyLinks = {
+            // SAKSHI'S CUSTOM LINKS (IDs Extracted & Embedded)
+            plant: "https://sketchfab.com/models/5c426b7880e440ce834012d06763d502/embed?autostart=1",
+            excretory: "https://sketchfab.com/models/06bf001c4ccf4c5a8c4cc1a7ef387044/embed?autostart=1",
+            nervous: "https://sketchfab.com/models/3db707928e274e3bb72b3f7536a2da17/embed?autostart=1"
+        };
+
+        function openModel(type) {
+            const viewer = document.getElementById('lab-viewer');
+            viewer.src = ""; // Brief flash to show button click
+            setTimeout(() => {
+                viewer.src = biologyLinks[type];
+            }, 50);
+        }
+    </script>
+</body>
+</html>

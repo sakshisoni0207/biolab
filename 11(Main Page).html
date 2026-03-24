@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="referrer" content="no-referrer">
+    
+    <title>Sakshi's ICSE Biology Lab | Grade 11</title>
+    <style>
+        :root {
+            /* Neon Azure for Advanced Higher Secondary Sciences */
+            --primary: #38bdf8; 
+            --bg: #0f172a;
+            --panel: #1e293b;
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            background: var(--bg); 
+            color: white; 
+            display: flex; 
+            height: 100vh; 
+            overflow: hidden; 
+        }
+
+        #sidebar {
+            width: 300px;
+            background: var(--panel);
+            padding: 35px 20px;
+            border-right: 2px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            z-index: 10;
+            box-shadow: 5px 0 15px rgba(0,0,0,0.5);
+        }
+
+        h1 { font-size: 1.6rem; color: var(--primary); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
+        .subtitle { font-size: 0.8rem; opacity: 0.5; margin-bottom: 40px; }
+
+        .topic-btn {
+            width: 100%;
+            padding: 18px;
+            margin-bottom: 15px;
+            background: #0f172a;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            color: white;
+            border-radius: 12px;
+            cursor: pointer;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .topic-btn:hover { 
+            background: var(--primary); 
+            color: #0f172a; 
+            transform: translateX(10px);
+            box-shadow: 0 0 20px rgba(56, 189, 248, 0.4);
+        }
+
+        #viewport { 
+            flex-grow: 1; 
+            background: #000;
+        }
+
+        iframe { 
+            width: 100%; 
+            height: 100%; 
+            border: none; 
+        }
+
+        #footer {
+            margin-top: auto;
+            font-size: 0.75rem;
+            opacity: 0.4;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <h1>BIO-LAB 3D</h1>
+        <div class="subtitle">ISC GRADE 11 CURRICULUM</div>
+        
+        <button class="topic-btn" onclick="openModel('plants')">Anatomy of Plants</button>
+        <button class="topic-btn" onclick="openModel('biomolecules')">Biomolecules</button>
+
+        <div id="footer">
+            Developer: Sakshi Soni<br>
+            Security Bypass: Active
+        </div>
+    </div>
+
+    <div id="viewport">
+        <iframe id="lab-viewer" src="https://sketchfab.com/models/e71bfcf145c742cdbbde168d0f9736b8/embed?autostart=1"></iframe>
+    </div>
+
+    <script>
+        const biologyLinks = {
+            // SAKSHI'S CUSTOM LINKS
+            plants: "https://sketchfab.com/models/e71bfcf145c742cdbbde168d0f9736b8/embed?autostart=1",
+            biomolecules: "https://sketchfab.com/models/b5e07ba6af7846c7bd9cc6992196d2a5/embed?autostart=1"
+        };
+
+        function openModel(type) {
+            const viewer = document.getElementById('lab-viewer');
+            viewer.src = ""; // Brief flash to show button click
+            setTimeout(() => {
+                viewer.src = biologyLinks[type];
+            }, 50);
+        }
+    </script>
+</body>
+</html>
